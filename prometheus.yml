@@ -1,0 +1,12 @@
+
+//Mi Deploy Dillan Coloma
+//Con esto debe correr prometehus y los servicios de la aplicación
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'todo-rest'
+    static_configs:
+      - targets: ['todo-rest:8080']
+    metrics_path: '/metrics'
+    scrape_interval: 5s
